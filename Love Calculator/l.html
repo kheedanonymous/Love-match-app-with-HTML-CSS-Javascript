@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Love Calculator</title>
+    <link rel="stylesheet" type="text/css" href="l.css" />
+    <script>
+      function myFunction() {
+        if (
+          document.getElementById("crush").value != "" &&
+          document.getElementById("you").value != ""
+        ) {
+
+
+          document.getElementById("result").innerHTML =
+            "The love Percentage of " +
+            document.getElementById("you").value +
+            " and " +
+            document.getElementById("crush").value +
+            " is ";
+
+
+          document.getElementById("percentage").innerHTML =
+          Math.floor(Math.random() * 100) + 1+"%"; 
+
+
+        } else {
+          document.getElementById("result").innerHTML =
+            "Please Type the names of both you and your crush";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>LOVE MATCH</h1>
+      </div>
+      <div class="body">
+        <h2>Find out if your crush loves you :)</h2>
+        <p>Your name</p>
+        <input type="text" name="" placeholder="Type in your name" id="you" />
+        <p>Your crush's name</p>
+        <input
+          type="text"
+          name=""
+          placeholder="Type in your crush's name"
+          id="crush"
+        />
+        <h5>Fingers Crossed</h5>
+        <input type="submit" onclick="myFunction()" value="Calculate" />
+      </div>
+      <div id="result" style="text-align: center;padding-top: 10%;">
+       
+      </div>
+      <div id="percentage" style="font-weight: bold;text-align: center;padding-top: 10%;font-size: 20pt;"></div>
+    </div>
+  </body>
+</html>
